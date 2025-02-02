@@ -1,6 +1,6 @@
 import React from 'react'
 
-export default function reservation() {
+export default function index() {
   return (
     <div className="container-fluid my-5">
     <div className="container">
