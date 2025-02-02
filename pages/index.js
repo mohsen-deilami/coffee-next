@@ -1,3 +1,8 @@
+import Offer from "@/components/offer/Offer";
 export default function Home() {
-  return <p>fa-coffee</p>;
+  return (
+
+    <Offer/>
+  )
+  
 }
