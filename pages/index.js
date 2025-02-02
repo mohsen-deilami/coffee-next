@@ -1,13 +1,3 @@
-
-
-
-
-
 export default function Home() {
-  return (
-  <p>
-
-    fa-coffee
-  </p> 
-  );
+  return <p>fa-coffee</p>;
 }
