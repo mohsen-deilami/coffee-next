@@ -14,18 +14,18 @@ export default function App({ Component, pageProps }) {
             </button>
             <div className="collapse navbar-collapse justify-content-between" id="navbarCollapse">
                 <div className="navbar-nav ml-auto p-4">
-                    <a href="index.html" className="nav-item nav-link active">Home</a>
-                    <a href="about.html" className="nav-item nav-link">About</a>
-                    <a href="service.html" className="nav-item nav-link">Service</a>
-                    <a href="menu.html" className="nav-item nav-link">Menu</a>
+                    <a href="/" className="nav-item nav-link active">Home</a>
+                    <a href="/about" className="nav-item nav-link">About</a>
+                    <a href="service" className="nav-item nav-link">Service</a>
+                    <a href="menu" className="nav-item nav-link">Menu</a>
                     <div className="nav-item dropdown">
                         <a href="#" className="nav-link dropdown-toggle" data-toggle="dropdown">Pages</a>
                         <div className="dropdown-menu text-capitalize">
-                            <a href="reservation.html" className="dropdown-item">Reservation</a>
-                            <a href="testimonial.html" className="dropdown-item">Testimonial</a>
+                            <a href="reservation" className="dropdown-item">Reservation</a>
+                            <a href="testimoniall" className="dropdown-item">Testimonial</a>
                         </div>
                     </div>
-                    <a href="contact.html" className="nav-item nav-link">Contact</a>
+                    <a href="contact" className="nav-item nav-link">Contact</a>
                 </div>
             </div>
         </nav>
