@@ -18,13 +18,19 @@ export default function App({ Component, pageProps }) {
                     <a href="/about" className="nav-item nav-link">About</a>
                     <a href="service" className="nav-item nav-link">Service</a>
                     <a href="menu" className="nav-item nav-link">Menu</a>
-                    <div className="nav-item dropdown">
+                   
+                    
+                     
+                            <a href="/reservation" className="nav-item nav-link">Reservation</a>
+                            <a href="/testimonial" className="nav-item nav-link">Testimonial</a>
+                    
+                   {/*  <div className="nav-item dropdown">
                         <a href="#" className="nav-link dropdown-toggle" data-toggle="dropdown">Pages</a>
                         <div className="dropdown-menu text-capitalize">
-                            <a href="reservation" className="dropdown-item">Reservation</a>
-                            <a href="testimoniall" className="dropdown-item">Testimonial</a>
+                            <a href="/reservation" className="dropdown-item">Reservation</a>
+                            <a href="/testimoniall" className="dropdown-item">Testimonial</a>
                         </div>
-                    </div>
+                    </div> */}
                     <a href="contact" className="nav-item nav-link">Contact</a>
                 </div>
             </div>
