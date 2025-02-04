@@ -74,10 +74,10 @@ export default function App({ Component, pageProps }) {
                 <h4 className="text-white text-uppercase mb-4" style={{letterSpacing: "3px"}}>Follow Us</h4>
                 <p>Amet elitr vero magna sed ipsum sit kasd sea elitr lorem rebum</p>
                 <div className="d-flex justify-content-start">
-                    <a className="btn btn-lg btn-outline-light btn-lg-square mr-2" href="#"><i className="fab fa-twitter"></i></a>
-                    <a className="btn btn-lg btn-outline-light btn-lg-square mr-2" href="#"><i className="fab fa-facebook-f"></i></a>
-                    <a className="btn btn-lg btn-outline-light btn-lg-square mr-2" href="#"><i className="fab fa-linkedin-in"></i></a>
-                    <a className="btn btn-lg btn-outline-light btn-lg-square" href="#"><i className="fab fa-instagram"></i></a>
+                    <a className="btn btn-lg btn-outline-light btn-lg-square mr-2" href="#"><i className="fa fa-twitter"></i></a>
+                    <a className="btn btn-lg btn-outline-light btn-lg-square mr-2" href="#"><i className="fa fa-facebook-f"></i></a>
+                    <a className="btn btn-lg btn-outline-light btn-lg-square mr-2" href="#"><i className="fa fa-linkedin-in"></i></a>
+                    <a className="btn btn-lg btn-outline-light btn-lg-square" href="#"><i className="fa fa-instagram"></i></a>
                 </div>
             </div>
             <div className="col-lg-3 col-md-6 mb-5">

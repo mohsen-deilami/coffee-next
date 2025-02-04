@@ -1,8 +1,8 @@
-import Offer from "@/components/offer/Offer";
+
 export default function Home() {
   return (
 
- homepage
+ <p>Homepage</p>
   )
   
 }
