@@ -9,9 +9,9 @@ export default function Offer() {
             <h4 className="text-white font-weight-normal mb-4 pb-3">Only for Sunday from 1st Jan to 30th Jan 2045</h4>
             <form className="form-inline justify-content-center mb-4">
                 <div className="input-group">
-                    <input type="text" className="form-control p-4" placeholder="Your Email" style={{height: "60px"}}/>
+                    <input type="text" className="form-control p-4" placeholder="Your Email" style={{height: "60px" , borderRadius:'0' , minWidth:"320px"}}/>
                     <div className="input-group-append">
-                        <button className="btn btn-primary font-weight-bold px-4" type="submit">Sign Up</button>
+                        <button className="btn btn-primary font-weight-bold px-4 " style={{borderRadius:'0'}} type="submit">Sign Up</button>
                     </div>
                 </div>
             </form>
