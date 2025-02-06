@@ -1,4 +1,5 @@
 import About from "@/Components/templates/index/About";
+import Service from "@/Components/templates/index/Service";
 import Slider from "@/Components/templates/index/Slider";
 
 export default function Home() {
@@ -6,6 +7,7 @@ export default function Home() {
     <>
  <Slider/>
  <About/>
+ <Service/>
     </>
 
   )
