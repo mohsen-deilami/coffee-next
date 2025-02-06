@@ -5,7 +5,6 @@ config.autoAddCss = false;
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import * as Icons from "@fortawesome/free-solid-svg-icons";
 export default function ServiceItem({title , desc , img , icon}) {
-  
   return (
     <div className="col-lg-6 mb-5">
     <div className="row align-items-center">
