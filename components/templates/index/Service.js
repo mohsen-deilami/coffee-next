@@ -53,3 +53,14 @@ export default function Service() {
     </div>
   );
 }
+
+export async function getStaticProps(){
+  const res = await fetch("")
+  return{
+    props:{
+      data :{
+        services
+      }
+    }
+  }
+}
