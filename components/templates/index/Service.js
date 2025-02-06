@@ -21,6 +21,7 @@ export default function Service() {
             desc={
               "Sit lorem ipsum et diam elitr est dolor sed duo. Guberg sea et et lorem dolor sed est sit invidunt, dolore tempor diam ipsum takima erat tempor"
             }
+             icon="faTruck"
           />
           <ServiceItem
             title="Fresh Coffee Beans"
@@ -28,6 +29,7 @@ export default function Service() {
             desc={
               "Sit lorem ipsum et diam elitr est dolor sed duo. Guberg sea et et lorem dolor sed est sit invidunt, dolore tempor diam ipsum takima erat tempor"
             }
+             icon="faCoffee"
           />
           <ServiceItem
             title="Best Quality Coffee"
@@ -35,6 +37,7 @@ export default function Service() {
             desc={
               "Sit lorem ipsum et diam elitr est dolor sed duo. Guberg sea et et lorem dolor sed est sit invidunt, dolore tempor diam ipsum takima erat tempor"
             }
+              icon="faAward"
           />
           <ServiceItem
             title="Online Table Booking"
@@ -42,13 +45,9 @@ export default function Service() {
             desc={
               "Sit lorem ipsum et diam elitr est dolor sed duo. Guberg sea et et lorem dolor sed est sit invidunt, dolore tempor diam ipsum takima erat tempor"
             }
+             icon="faTable"
           />
 
-          {/*    <h4><i className="fa fa-truck service-icon"></i></h4>
-                             <h4><i className="fa fa-coffee service-icon"></i></h4>
-                      
-                            <h4><i className="fa fa-award service-icon"></i></h4>
-                            <h4><i className="fa fa-table service-icon"></i></h4> */}
         </div>
       </div>
     </div>
