@@ -6,12 +6,12 @@ import Service from "@/Components/templates/index/Service";
 import Slider from "@/Components/templates/index/Slider";
 import Testimonial from "@/Components/templates/index/Testimonial";
 
-export default function Home({ data }) {
+export default function Home({ dataServices }) {
   return (
     <>
       <Slider />
       <About />
-      <Service services={data.services} />
+      <Service services={dataServices.services} />
       <Offer />
       <Menu />
       <Reservation />
@@ -25,7 +25,7 @@ export async function getStaticProps() {
   const services = await res.json();
   return {
     props: {
-      data: {
+      dataServices: {
         services,
       },
     },
