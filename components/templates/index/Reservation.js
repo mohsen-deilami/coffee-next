@@ -2,7 +2,7 @@ import React from 'react'
 
 export default function Reservation() {
   return (
-    <div className="container-fluid my-5">
+    <div className="container-fluid my-5" >
     <div className="container">
         <div className="reservation position-relative overlay-top overlay-bottom">
             <div className="row align-items-center">

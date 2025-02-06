@@ -2,7 +2,7 @@ import React from "react";
 
 export default function About() {
   return (
-    <div className="container-fluid py-5">
+    <div className="container-fluid py-5" >
       <div className="container">
         <div className="section-title">
           <h4

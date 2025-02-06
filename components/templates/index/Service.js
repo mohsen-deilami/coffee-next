@@ -2,7 +2,7 @@ import React from 'react'
 
 export default function Service() {
   return (
-    <div className="container-fluid pt-5">
+    <div className="container-fluid pt-5" >
         <div className="container">
             <div className="section-title">
                 <h4 className="text-primary text-uppercase" style={{letterSpacing: "5px"}}>Our Services</h4>
