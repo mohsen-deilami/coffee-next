@@ -3,9 +3,26 @@ import React, { useState } from "react";
 export default function Reservation() {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
-  const [date, setDate] = useState("");
+  const [date, setData] = useState("");
   const [time, setTime] = useState("");
-  const [person, setPerson] = useState("");
+  const [person, setPerson] = useState("0");
+const [showAlert, setShowAlert] = useState(false);
+  const submitHandler = async (event) => {
+    event.preventDefault();
+
+    const res = await fetch("http://localhost:4000/reserve", {
+      method: "post",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({ name, email, date, time, person }),
+    });
+if (res.status === 201){
+
+    setShowAlert(true);
+}
+  };
+
   return (
     <div className="container-fluid my-5">
       <div className="container">
@@ -44,15 +61,16 @@ export default function Reservation() {
                 style={{ background: "rgba(51, 33, 29, .8)" }}
               >
                 <h1 className="text-white mb-4 mt-5">Book Your Table</h1>
-                <form className="mb-5">
+                <form className="mb-5" onSubmit={submitHandler}>
                   <div className="form-group">
                     <input
                       type="text"
                       className="form-control bg-transparent  border-primary p-4"
                       placeholder="Name"
                       required="required"
+                      name="name"
                       value={name}
-                      onChange={event => setName(event.target.value)}
+                      onChange={(event) => setName(event.target.value)}
                     />
                   </div>
                   <div className="form-group">
@@ -61,8 +79,9 @@ export default function Reservation() {
                       className="form-control bg-transparent border-primary p-4"
                       placeholder="Email"
                       required="required"
+                      name="email"
                       value={email}
-                      onChange={event => setEmail(event.target.value)}
+                      onChange={(event) => setEmail(event.target.value)}
                     />
                   </div>
                   <div className="form-group">
@@ -73,8 +92,9 @@ export default function Reservation() {
                         placeholder="Date"
                         data-target="#date"
                         data-toggle="datetimepicker"
+                        name="date"
                         value={date}
-                        onChange={event => setDate(event.target.value)}
+                        onChange={(event) => setData(event.target.value)}
                       />
                     </div>
                   </div>
@@ -86,8 +106,9 @@ export default function Reservation() {
                         placeholder="Time"
                         data-target="#time"
                         data-toggle="datetimepicker"
+                        name="time"
                         value={time}
-                        onChange={event => setTime(event.target.value)}
+                        onChange={(event) => setTime(event.target.value)}
                       />
                     </div>
                   </div>
@@ -95,6 +116,9 @@ export default function Reservation() {
                     <select
                       className="custom-select bg-transparent border-primary px-4"
                       style={{ height: "49px" }}
+                      name="person"
+                      value={person}
+                      onChange={(event) => setPerson(event.target.value)}
                     >
                       <option>Person</option>
                       <option value="1">Person 1</option>
@@ -113,6 +137,30 @@ export default function Reservation() {
                     </button>
                   </div>
                 </form>
+                {showAlert && (
+          <div
+            className="alert alert-primary"
+            role="alert"
+            style={{ width: "50%", display: "inline-block" }}
+          >
+            <a href="#" className="alert-link">
+              {" "}
+              Reserved successfully :))
+            </a>
+            <button
+              style={{
+                position: "absolute",
+                top: "0px",
+                right: "0px",
+                border: "none",
+                background: "inherit",
+              }}
+              onClick={() => setShowAlert(false)}
+            >
+              ×
+            </button>
+          </div>
+        )}
               </div>
             </div>
           </div>
