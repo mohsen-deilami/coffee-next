@@ -6,7 +6,7 @@ export default function Offer() {
   const sendHandler = async (event) => {
     event.preventDefault();
     setShowAlert(false);
-    const res = await fetch("http://localhost:4000/newsLetters", {
+    const res = await fetch("http://localhost:4000/newsletters", {
       method: "post",
       headers: {
         "Content-Type": "application/json",

@@ -1,7 +1,8 @@
 
     import React from 'react'
 
-    export default function Menu() {
+    export default function Menu({menu}) {
+        console.log("menu:=>", menu);
       return (
         <div className="container-fluid pt-5 " >
         <div className="container">

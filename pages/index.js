@@ -6,14 +6,14 @@ import Service from "@/Components/templates/index/Service";
 import Slider from "@/Components/templates/index/Slider";
 import Testimonial from "@/Components/templates/index/Testimonial";
 
-export default function Home({ dataServices }) {
+export default function Home({ data }) {
   return (
     <>
       <Slider />
       <About />
-      <Service services={dataServices.services} />
+      <Service services={data.services} />
       <Offer />
-      <Menu />
+      <Menu menu={data.menu}/>
       <Reservation />
       <Testimonial />
     </>
@@ -21,12 +21,17 @@ export default function Home({ dataServices }) {
 }
 
 export async function getStaticProps() {
-  const res = await fetch("http://localhost:4000/services");
-  const services = await res.json();
+  const servicesResponse = await fetch("http://localhost:4000/services");
+  const servicesData = await servicesResponse.json();
+
+  const menuResponse = await fetch("http://localhost:4000/menu");
+  const menuData = await menuResponse.json();
+
   return {
     props: {
-      dataServices: {
-        services,
+      data: {
+        services:servicesData,
+        menu:menuData
       },
     },
     revalidate: 60 * 60 * 12,

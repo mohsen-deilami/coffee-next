@@ -1,7 +1,7 @@
 import ServiceItem from "@/Components/moduls/serviceItem/ServiceItem";
 import React from "react";
 
-export default function Service() {
+export default function Service({services}) {
   return (
     <div className="container-fluid pt-5">
       <div className="container">
@@ -15,41 +15,22 @@ export default function Service() {
           <h1 className="display-4">Fresh & Organic Beans</h1>
         </div>
         <div className="row">
-          <ServiceItem
-            title="Fastest Door Delivery"
-            img="img/service-1.jpg"
-            desc={
-              "Sit lorem ipsum et diam elitr est dolor sed duo. Guberg sea et et lorem dolor sed est sit invidunt, dolore tempor diam ipsum takima erat tempor"
-            }
-             icon="faTruck"
+          {services?.map(service=>(
+
+          <ServiceItem 
+          key={service.id}
+            title={service.title}
+            img={service.img}
+            desc={service.desc }
+             icon={service.icon}
           />
-          <ServiceItem
-            title="Fresh Coffee Beans"
-            img="img/service-2.jpg"
-            desc={
-              "Sit lorem ipsum et diam elitr est dolor sed duo. Guberg sea et et lorem dolor sed est sit invidunt, dolore tempor diam ipsum takima erat tempor"
-            }
-             icon="faCoffee"
-          />
-          <ServiceItem
-            title="Best Quality Coffee"
-            img="img/service-3.jpg"
-            desc={
-              "Sit lorem ipsum et diam elitr est dolor sed duo. Guberg sea et et lorem dolor sed est sit invidunt, dolore tempor diam ipsum takima erat tempor"
-            }
-              icon="faAward"
-          />
-          <ServiceItem
-            title="Online Table Booking"
-            img="img/service-3.jpg"
-            desc={
-              "Sit lorem ipsum et diam elitr est dolor sed duo. Guberg sea et et lorem dolor sed est sit invidunt, dolore tempor diam ipsum takima erat tempor"
-            }
-             icon="faTable"
-          />
+          ))}
+       
 
         </div>
       </div>
     </div>
   );
 }
+
+
