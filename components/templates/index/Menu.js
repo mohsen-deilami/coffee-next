@@ -1,7 +1,7 @@
+import Card from "@/Components/moduls/card/Card";
 import React from "react";
 
 export default function Menu({ menus }) {
-  console.log("menu:=>", menus);
   return (
     <div className="container-fluid pt-5 ">
       <div className="container">
@@ -21,20 +21,7 @@ export default function Menu({ menus }) {
               ?.filter((items) => items.type === "hot")
               .slice(0, 3)
               .map((menu) => (
-                <div className="row align-items-center mb-5">
-                  <div className="col-4 col-sm-3">
-                    <img
-                      className="w-100 rounded-circle mb-3 mb-sm-0"
-                      src={menu.img}
-                      alt=""
-                    />
-                    <h5 className="menu-price">{menu.price}$</h5>
-                  </div>
-                  <div className="col-8 col-sm-9">
-                    <h4> {menu.title}</h4>
-                    <p className="m-0">{menu.desc}</p>
-                  </div>
-                </div>
+                <Card {...menu} key={menu.id}/>
               ))}
           </div>
           <div className="col-lg-6">
@@ -43,20 +30,7 @@ export default function Menu({ menus }) {
               ?.filter((items) => items.type === "cold")
               .slice(0, 3)
               .map((menu) => (
-                <div className="row align-items-center mb-5">
-                <div className="col-4 col-sm-3">
-                  <img
-                    className="w-100 rounded-circle mb-3 mb-sm-0"
-                    src={menu.img}
-                    alt=""
-                  />
-                  <h5 className="menu-price">{menu.price}$</h5>
-                </div>
-                <div className="col-8 col-sm-9">
-                  <h4> {menu.title}</h4>
-                  <p className="m-0">{menu.desc}</p>
-                </div>
-              </div>
+                <Card {...menu} key={menu.id}/>
               ))}
           </div>
         </div>
