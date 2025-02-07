@@ -13,7 +13,7 @@ export default function Home({ data }) {
       <About />
       <Service services={data.services} />
       <Offer />
-      <Menu menu={data.menu}/>
+      <Menu menus={data.menus}/>
       <Reservation />
       <Testimonial />
     </>
@@ -31,7 +31,7 @@ export async function getStaticProps() {
     props: {
       data: {
         services:servicesData,
-        menu:menuData
+        menus:menuData
       },
     },
     revalidate: 60 * 60 * 12,
