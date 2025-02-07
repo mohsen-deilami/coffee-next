@@ -1986,10 +1986,10 @@ pre code {
   font-size: 1rem;
   font-weight: 400;
   line-height: 1.5;
-  color: #495057;
+  color: #ebedf0 !important;
   background-color: #fff;
   background-clip: padding-box;
-  border: 1px solid #ced4da;
+  border: 1px solid #da9f5b !important;
   border-radius: 0;
   transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 }
@@ -2019,7 +2019,7 @@ pre code {
 }
 
 .form-control::placeholder {
-  color: #6c757d;
+  color: #9d9e9fcf !important;
   opacity: 1;
 }
 
@@ -6125,7 +6125,7 @@ button.bg-dark:focus {
 }
 
 .border-primary {
-  border-color: #da9f5b !important;
+   border-color: #da9f5b !important; 
 }
 
 .border-secondary {
