@@ -9524,12 +9524,15 @@ h6,
   height: 80px;
 }
 
+
 .contact-form .help-block ul {
   margin: 0;
   padding: 0;
   list-style-type: none;
 }
-
+.testimonial-item{
+  margin-bottom: 32px;
+}
 .reservation,
 .page-header,
 .offer,

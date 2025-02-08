@@ -15,7 +15,7 @@ export default function Home({ data }) {
       <Offer />
       <Menu menus={data.menus}/>
       <Reservation />
-      <Testimonial />
+      <Testimonial comments={data.comments}/>
     </>
   );
 }
@@ -26,12 +26,15 @@ export async function getStaticProps() {
 
   const menuResponse = await fetch("http://localhost:4000/menu");
   const menuData = await menuResponse.json();
-
+  
+  const commenytResponse = await fetch("http://localhost:4000/comments");
+  const commentData = await commenytResponse.json();
   return {
     props: {
       data: {
         services:servicesData,
-        menus:menuData
+        menus:menuData,
+        comments:commentData
       },
     },
     revalidate: 60 * 60 * 12,
