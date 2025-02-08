@@ -18,6 +18,7 @@ export default function Testimonial({ comments }) {
           {comments?.slice(0, 4).map((comment) => (
 
               <CommentsItem
+              key={comment.id}
                 username={comment.username}
                 body={comment.body}
                 profile={comment.profile}

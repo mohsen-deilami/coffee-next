@@ -10,7 +10,7 @@ const [showAlert, setShowAlert] = useState(false);
   const submitHandler = async (event) => {
     event.preventDefault();
 
-    const res = await fetch("http://localhost:4000/reserve", {
+    const res = await fetch("http://localhost:4000/messages", {
       method: "post",
       headers: {
         "Content-Type": "application/json",
@@ -19,7 +19,7 @@ const [showAlert, setShowAlert] = useState(false);
     });
 if (res.status === 201){
 
-    setShowAlert(true);
+  const [showAlert, setShowAlert] = useState(false);
 }
   };
 
