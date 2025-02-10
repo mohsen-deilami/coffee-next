@@ -7,3 +7,11 @@ export default function Result() {
     </div>
   )
 }
+
+export async function getServerSideProps(context) {
+    const {params , request , response , query}=context;
+    console.log(query)
+    return {
+        props:{}
+    }
+}
