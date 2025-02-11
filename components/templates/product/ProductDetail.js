@@ -6,8 +6,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faStar, faShoppingBag } from "@fortawesome/free-solid-svg-icons";
 
 const ProductsDetails = ({ detail }) => {
-    console.log(detail)
-  return (
+    return (
     <div
       className={`${styles.product_main}   align-items-center mb-5 text-decoration-none justify-content-center`}
     >

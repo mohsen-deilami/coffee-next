@@ -1,4 +1,3 @@
-
 import React, { useEffect, useState } from "react";
 import styles from "@/styles/Navbar.module.css";
 import Link from "next/link";
@@ -27,7 +26,7 @@ function Navbar() {
       route.push(`/search?q=${search}`);
     }
   };
-/* useEffect(()=>{
+  /* useEffect(()=>{
   setSearch(route.query.q)
 },[]) */
   return (
