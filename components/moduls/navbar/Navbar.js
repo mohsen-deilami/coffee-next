@@ -1,9 +1,8 @@
 
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import styles from "@/styles/Navbar.module.css";
 import Link from "next/link";
 
-// Fontawesome
 import "@fortawesome/fontawesome-svg-core/styles.css";
 import { config } from "@fortawesome/fontawesome-svg-core";
 config.autoAddCss = false;
@@ -28,7 +27,9 @@ function Navbar() {
       route.push(`/search?q=${search}`);
     }
   };
-
+useEffect(()=>{
+  setSearch(route.query.q)
+},[])
   return (
     <div className={`container-fluid p-0 ${styles.nav_bar}`}>
       <nav
