@@ -27,9 +27,9 @@ function Navbar() {
       route.push(`/search?q=${search}`);
     }
   };
-useEffect(()=>{
+/* useEffect(()=>{
   setSearch(route.query.q)
-},[])
+},[]) */
   return (
     <div className={`container-fluid p-0 ${styles.nav_bar}`}>
       <nav
