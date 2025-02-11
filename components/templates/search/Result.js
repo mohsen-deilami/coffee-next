@@ -1,6 +1,7 @@
 import React from 'react'
 
-export default function Result() {
+export default function Result(resultSearch) {
+console.log(resultSearch);
   return (
     <div>
       search result
@@ -8,10 +9,4 @@ export default function Result() {
   )
 }
 
-export async function getServerSideProps(context) {
-    const {params , request , response , query}=context;
-    console.log(query)
-    return {
-        props:{}
-    }
-}
+

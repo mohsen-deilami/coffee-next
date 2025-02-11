@@ -11,7 +11,7 @@ export default function index({data}) {
   )
 }
 
-export async function getStaticProps(context) {
+export async function getStaticProps() {
   const menuResponse = await fetch("http://localhost:4000/menu");
   const menuData = await menuResponse.json();
 
