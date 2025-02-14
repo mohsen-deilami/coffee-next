@@ -6,7 +6,8 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faStar, faShoppingBag } from "@fortawesome/free-solid-svg-icons";
 
 const ProductsDetails = ({ detail }) => {
-    return (
+
+  return (
     <div
       className={`${styles.product_main}   align-items-center mb-5 text-decoration-none justify-content-center`}
     >
@@ -19,11 +20,18 @@ const ProductsDetails = ({ detail }) => {
         <h4 className="text-white mb-3">{detail.title}</h4>
         <hr style={{ borderColor: "white" }} />
         <div className={styles.stars}>
-          <FontAwesomeIcon className={styles.fill_star} icon={faStar} />
-          <FontAwesomeIcon className={styles.fill_star} icon={faStar} />
-          <FontAwesomeIcon className={styles.fill_star} icon={faStar} />
-          <FontAwesomeIcon className={styles.fill_star} icon={faStar} />
-          <FontAwesomeIcon icon={faStar} />
+          {new Array(Math.floor(detail?.score)).fill(0).map((item, index) => (
+            <FontAwesomeIcon
+              className={styles.fill_star}
+              icon={faStar}
+              key={index}
+            />
+          ))}
+         {new Array(5- Math.floor(detail?.score)).fill(0).map((item, index) => (
+           <FontAwesomeIcon icon={faStar}  key={index}/>
+          ))} 
+
+          
         </div>
         <div className={styles.price_details}>
           {detail.off ? (
