@@ -22,7 +22,7 @@ export async function getServerSideProps(context) {
     (item) =>
       item.type.includes(query.q.toLocaleLowerCase()) ||
       item.title.toLocaleLowerCase().includes(query.q.toLocaleLowerCase())
-  )
+  );
   return {
     props: {
       data: {

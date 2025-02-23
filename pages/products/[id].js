@@ -3,13 +3,12 @@ import ProductDetail from "@/Components/templates/product/ProductDetail";
 import Comments from "@/Components/templates/testimonial/Comments";
 import React from "react";
 
-export default function detail({ menuData , comments }) {
-
+export default function detail({ menuData, comments }) {
   return (
     <div>
       <PageHeader pageName={"Detail"} />
       <ProductDetail detail={menuData} />
-      <Comments comments={comments}s/>
+      <Comments comments={comments} s />
     </div>
   );
 }
@@ -30,14 +29,16 @@ export async function getStaticProps(context) {
 
   const commentsResponse = await fetch(`http://localhost:4000/comments`);
   const commentsData = await commentsResponse.json();
-  console.log('commentsData', commentsData)
-  const comments= await commentsData.filter(comment => comment.productID === +params.id)
-  console.log('commentResult', comments)
+  console.log("commentsData", commentsData);
+  const comments = await commentsData.filter(
+    (comment) => comment.productID === +params.id
+  );
+  console.log("commentResult", comments);
 
   return {
     props: {
       menuData,
-      comments
+      comments,
     },
   };
 }

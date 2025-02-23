@@ -1,14 +1,14 @@
-import PageHeader from '@/Components/moduls/pageHeader/PageHeader'
-import Service from '@/Components/templates/index/Service'
-import React from 'react'
+import PageHeader from "@/Components/moduls/pageHeader/PageHeader";
+import Service from "@/Components/templates/index/Service";
+import React from "react";
 
-export default function index({data}) {
+export default function index({ data }) {
   return (
     <div>
-     <PageHeader pageName={"services"}/>
-    <Service services={data.services}/>
+      <PageHeader pageName={"services"} />
+      <Service services={data.services} />
     </div>
-  )
+  );
 }
 
 export async function getStaticProps(context) {
@@ -17,9 +17,9 @@ export async function getStaticProps(context) {
 
   return {
     props: {
-    data: {
-      services: servicesData,
+      data: {
+        services: servicesData,
+      },
     },
-  }
   };
 }
